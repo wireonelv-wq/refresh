@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-fresh Cakes & Products | Padukka</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #fffaf5;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #e63946 0%, #ff758c 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.25);
+        }
+        .brand-pill {
+            display: inline-block;
+            background: #f4ff00;
+            color: #159915;
+            font-weight: 800;
+            font-size: 2.4rem;
+            padding: 6px 28px;
+            border-radius: 50px;
+            border: 4px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            letter-spacing: 1px;
+        }
+        header p {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            opacity: 0.95;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.22);
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-top: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .top-links {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .btn-fb {
+            display: inline-block;
+            background-color: #1877F2;
+            color: white;
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 10px rgba(24, 119, 242, 0.3);
+        }
+        .container {
+            max-width: 1150px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #d62828;
+            margin-bottom: 10px;
+        }
+        .section-sub {
+            text-align: center;
+            color: #666;
+            margin-bottom: 35px;
+            font-size: 0.95rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+        }
+        .card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+        .card h3 {
+            color: #222;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+        .card p {
+            color: #666;
+            font-size: 0.92rem;
+            margin-bottom: 18px;
+        }
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.3s;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+        }
+        .btn-whatsapp:hover {
+            background-color: #1ebe5d;
+        }
+        .info-box {
+            background: white;
+            border-radius: 18px;
+            padding: 35px 25px;
+            margin-top: 50px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 2px dashed #ff758c;
+        }
+        .info-box h2 {
+            color: #d62828;
+            margin-bottom: 12px;
+        }
+        .info-actions {
+            margin-top: 18px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        footer {
+            background: #2b2d42;
+            color: #edf2f4;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #90e0ef;
+            text-decoration: none;
+        }
+        .floating-wa {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand-pill">Re-fresh</div>
+        <p>ඔබේ සෑම විශේෂ අවස්ථාවක්ම රසවත් කරන නැවුම් කේක් නිර්මාණ</p>
+        <div class="badge">📍 Padukka & Surrounding Areas</div>
+        <div class="top-links">
+            <a href="https://web.facebook.com/refreshproduct.lk" target="_blank" class="btn-fb">📘 View Our Cake Gallery on Facebook</a>
+            <a href="https://wa.me/94763999890?text=Hello%20Re-fresh!%20Mata%20cake%20ekak%20order%20karanna%20one." target="_blank" class="btn-whatsapp">💬 Order on WhatsApp</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">අපගේ කේක් නිර්මාණ (Our Creations)</h2>
+        <p class="section-sub">ඔබ කැමති ඕනෑම Design එකකින්, රසයකින් සහ ප්‍රමාණයකින් ඇණවුම් කළ හැක</p>
+
+        <div class="grid">
+            <!-- Custom & Floral Birthday Cakes -->
+            <div class="card">
+                <img src="birthday.jpg" onerror="this.src='https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?auto=format&fit=crop&w=600&q=80'" alt="Birthday Cakes">
+                <div class="card-content">
+                    <h3>Birthday & Anniversary Cakes</h3>
+                    <p>Floral designs, Drip cakes, Heart-shaped cakes සහ ඔබේ ආදරණීයයන්ගේ නම සඳහන් විශේෂ කේක් නිර්මාණ.</p>
+                    <a href="https://wa.me/94763999890?text=Hello%20Re-fresh!%20Mata%20Birthday/Anniversary%20Cake%20ekak%20order%20karanna%20wisthara%20danaganna%20puluwanda?" target="_blank" class="btn-whatsapp">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <!-- Kids & Theme Cakes -->
+            <div class="card">
+                <img src="kids.jpg" onerror="this.src='https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=600&q=80'" alt="Theme Cakes">
+                <div class="card-content">
+                    <h3>Kids & Theme Cakes</h3>
+                    <p>Cartoon characters (Barbie, Spider-Man, Mickey, SpongeBob, Kuromi), Cricket, Vehicles සහ ඔබ කැමති ඕනෑම Theme එකකින්.</p>
+                    <a href="https://wa.me/94763999890?text=Hello%20Re-fresh!%20Mata%20Theme%20Cake%20ekak%20order%20karanna%20wisthara%20danaganna%20puluwanda?" target="_blank" class="btn-whatsapp">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <!-- Wedding Cakes -->
+            <div class="card">
+                <img src="wedding.jpg" onerror="this.src='https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=600&q=80'" alt="Wedding Cakes">
+                <div class="card-content">
+                    <h3>Wedding & Two-Tier Cakes</h3>
+                    <p>ඔබේ විවාහ මංගල්‍යය සහ Engagement උත්සවය වෙනුවෙන් අලංකාර Two-Tier / Multi-Tier Cakes සහ Cake Structures.</p>
+                    <a href="https://wa.me/94763999890?text=Hello%20Re-fresh!%20Mata%20Wedding%20Cake%20ekak%20gana%20wisthara%20danaganna%20puluwanda?" target="_blank" class="btn-whatsapp">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <!-- Cupcakes -->
+            <div class="card">
+                <img src="cupcakes.jpg" onerror="this.src='https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=600&q=80'" alt="Cupcakes">
+                <div class="card-content">
+                    <h3>Cupcakes & Party Packs</h3>
+                    <p>උපන්දින සාද, තෑගි සහ විශේෂ අවස්ථා සඳහා ඉතාමත් රසවත්, අලංකාර Cupcake Packs.</p>
+                    <a href="https://wa.me/94763999890?text=Hello%20Re-fresh!%20Mata%20Cupcakes%20order%20karanna%20wisthara%20danaganna%20puluwanda?" target="_blank" class="btn-whatsapp">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <!-- Bento Cakes -->
+            <div class="card">
+                <img src="bento.jpg" onerror="this.src='https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=600&q=80'" alt="Bento Cakes">
+                <div class="card-content">
+                    <h3>Bento Cakes</h3>
+                    <p>ඔබේ සිතේ තියෙන පණිවිඩයත් එක්ක ආදරණීයයන්ට තෑගි දෙන්න පුළුවන් හුරුබුහුටි Mini Bento Cakes.</p>
+                    <a href="https://wa.me/94763999890?text=Hello%20Re-fresh!%20Mata%20Bento%20Cake%20ekak%20order%20karanna%20wisthara%20danaganna%20puluwanda?" target="_blank" class="btn-whatsapp">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <!-- Jar Cakes -->
+            <div class="card">
+                <img src="jar.jpg" onerror="this.src='https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80'" alt="Jar Cakes">
+                <div class="card-content">
+                    <h3>Jar Cakes</h3>
+                    <p>ඕනෑම තැනකට පහසුවෙන් ගෙනයා හැකි, පිරිසිදුව ඇසුරුම් කළ රසවත් Cake Jars.</p>
+                    <a href="https://wa.me/94763999890?text=Hello%20Re-fresh!%20Mata%20Jar%20Cakes%20order%20karanna%20wisthara%20danaganna%20puluwanda?" target="_blank" class="btn-whatsapp">WhatsApp Order</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h2>ඇණවුම් කරන්නේ කෙසේද? (How to Order)</h2>
+            <p>අපගේ Facebook පිටුවේ ඇති ඕනෑම Cake Design එකක Screenshot එකක් හෝ ඔබ කැමති Design එකක් සමඟ දිනය සහ ප්‍රමාණය (Weight) සඳහන් කර WhatsApp පණිවිඩයක් එවන්න.<br>
+            <strong>පාදුක්ක (Padukka)</strong> සහ අවට ප්‍රදේශ සඳහා ඇණවුම් භාරගනු ලැබේ.</p>
+            <div class="info-actions">
+                <a href="https://wa.me/94763999890?text=Hello%20Re-fresh!%20Mata%20cake%20ekak%20order%20karanna%20one." target="_blank" class="btn-whatsapp">📞 WhatsApp: 076 399 9890</a>
+                <a href="https://web.facebook.com/refreshproduct.lk" target="_blank" class="btn-fb">📘 Facebook: Re-fresh Products</a>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/94763999890" target="_blank" class="floating-wa">💬 Chat on WhatsApp</a>
+
+    <footer>
+        <p>© 2026 <strong>Re-fresh Products & Cakes</strong> - Padukka. All Rights Reserved. | <a href="https://web.facebook.com/refreshproduct.lk" target="_blank">Facebook Page</a></p>
+    </footer>
+
+</body>
+</html>
